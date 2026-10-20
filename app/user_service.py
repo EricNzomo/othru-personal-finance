@@ -236,9 +236,7 @@ def authenticate_user(username: str, password: str):
     if not verify_password(password, user["hashed_password"]):
         return None
 
-        return user
-
-
+    return user
 def get_user_by_google_sub(google_sub: str):
     db = SessionLocal()
 
