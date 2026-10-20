@@ -1,0 +1,51 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node.js dependencies
+node_modules/
+frontend/node_modules/
+
+# Frontend build output
+frontend/dist/
+
+# Local application and debug files
+*.log
+*.tmp
+*.bak
+*.backup
+
+# Database dumps and backups
+*.sql
+*.dump
+*.backup
+*.pgdump
+
+# Local IDE settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Android build output
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/build/

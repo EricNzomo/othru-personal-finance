@@ -1,4 +1,53 @@
-.venv/ 
-.env 
-__pycache__/ 
-*.pyc 
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python caches and test output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node.js dependencies
+/node_modules/
+/frontend/node_modules/
+
+# Frontend build output
+/frontend/dist/
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.bak
+*.backup
+
+# Database backups and dumps
+*.sql
+*.dump
+*.pgdump
+
+# IDE settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Android build output
+/frontend/android/.gradle/
+/frontend/android/build/
+/frontend/android/app/build/
+
+# Local application backups
+app/*backup*.py
