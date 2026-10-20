@@ -19,16 +19,11 @@ app.include_router(auth_router)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        # Production frontend
         "https://othru-personal-finance.vercel.app",
-
-        # Local development
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:5174",
         "http://127.0.0.1:5174",
-
-        # Android / Capacitor
         "http://localhost",
         "https://localhost",
         "capacitor://localhost",
@@ -37,7 +32,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # ============================================================
 # PYDANTIC MODELS
