@@ -1,6 +1,7 @@
 import hashlib
 import os
 import secrets
+import logging
 from datetime import datetime, timedelta
 from urllib.parse import urlencode
 
@@ -105,15 +106,16 @@ def register(request: RegisterRequest):
     )
 
     try:
-        send_verification_email(email, verification_url)
-    except Exception:
-        raise HTTPException(
-            status_code=503,
-            detail=(
-                "Your account was created, but the verification email "
-                "could not be sent. Contact the application administrator."
-            ),
-        )
+    send_verification_email(email, verification_url)
+except Exception:
+    logging.exception("OTHRU verification email delivery failed")
+    raise HTTPException(
+        status_code=503,
+        detail=(
+            "Your account was created, but the verification email "
+            "could not be sent. Contact the application administrator."
+        ),
+    )
 
     return {
         "message": (
